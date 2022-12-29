@@ -8,6 +8,7 @@ import {OrdersScreen} from "./screen/orders/OrdersScreen";
 import {RankingScreen} from "./screen/ranking/RankingScreen";
 import {SalesChartScreen} from "./screen/sales/chart/SalesChartScreen";
 import {SalesQualityScreen} from "./screen/sales/quality/SalesQualityScreen";
+import {NotFoundScreen} from "./screen/notfound/NotFoundScreen";
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/ranking" element={<RankingScreen/>}/>,
             <Route path="/sales_chart" element={<SalesChartScreen/>}/>,
             <Route path="/sales_quality" element={<SalesQualityScreen/>}/>,
+            <Route path="/*" element={<NotFoundScreen/>}/>,
         ])
     )
     return (
