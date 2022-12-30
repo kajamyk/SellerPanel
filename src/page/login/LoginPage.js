@@ -1,4 +1,4 @@
-export function LoginScreen() {
+export function LoginPage() {
     return <div>
         Login
     </div>

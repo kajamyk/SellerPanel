@@ -1,4 +1,4 @@
-export function OrdersScreen() {
+export function OrdersPage() {
     return <div>
         Orders
     </div>

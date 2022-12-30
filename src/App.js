@@ -1,28 +1,28 @@
 import "./styles.css";
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom"
-import {LoginScreen} from "./screen/login/LoginScreen";
-import {HomeScreen} from "./screen/home/HomeScreen";
-import {AdviceScreen} from "./screen/advice/AdviceScreen";
-import {OpinionsScreen} from "./screen/opinions/OpinionsScreen";
-import {OrdersScreen} from "./screen/orders/OrdersScreen";
-import {RankingScreen} from "./screen/ranking/RankingScreen";
-import {SalesChartScreen} from "./screen/sales/chart/SalesChartScreen";
-import {SalesQualityScreen} from "./screen/sales/quality/SalesQualityScreen";
-import {NotFoundScreen} from "./screen/notfound/NotFoundScreen";
+import {LoginPage} from "./page/login/LoginPage";
+import {HomePage} from "./page/home/HomePage";
+import {AdvicePage} from "./page/advice/AdvicePage";
+import {OpinionsPage} from "./page/opinions/OpinionsPage";
+import {OrdersPage} from "./page/orders/OrdersPage";
+import {RankingPage} from "./page/ranking/RankingPage";
+import {SalesChartPage} from "./page/sales/chart/SalesChartPage";
+import {SalesQualityPage} from "./page/sales/quality/SalesQualityPage";
+import {NotFoundPage} from "./page/notfound/NotFoundPage";
 
 export default function App() {
 
     const router = createBrowserRouter(
         createRoutesFromElements([
-            <Route path="/" element={<HomeScreen/>}/>,
-            <Route path="/login" element={<LoginScreen/>}/>,
-            <Route path="/advice" element={<AdviceScreen/>}/>,
-            <Route path="/opinions" element={<OpinionsScreen/>}/>,
-            <Route path="/orders" element={<OrdersScreen/>}/>,
-            <Route path="/ranking" element={<RankingScreen/>}/>,
-            <Route path="/sales_chart" element={<SalesChartScreen/>}/>,
-            <Route path="/sales_quality" element={<SalesQualityScreen/>}/>,
-            <Route path="/*" element={<NotFoundScreen/>}/>,
+            <Route path="/" element={<HomePage/>}/>,
+            <Route path="/login" element={<LoginPage/>}/>,
+            <Route path="/advice" element={<AdvicePage/>}/>,
+            <Route path="/opinions" element={<OpinionsPage/>}/>,
+            <Route path="/orders" element={<OrdersPage/>}/>,
+            <Route path="/ranking" element={<RankingPage/>}/>,
+            <Route path="/sales_chart" element={<SalesChartPage/>}/>,
+            <Route path="/sales_quality" element={<SalesQualityPage/>}/>,
+            <Route path="/*" element={<NotFoundPage/>}/>,
         ])
     )
     return (

@@ -1,4 +1,4 @@
-export function AdviceScreen() {
+export function AdvicePage() {
     return <div>
         Advice
     </div>
