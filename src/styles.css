@@ -24,6 +24,16 @@
     border-radius: 10px;
 }
 
+.card-secondary {
+    background-color: var(--md-sys-color-secondary-container);
+    border-radius: 10px;
+}
+
+.card-transparent {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
 .vertical-divider {
     height: 100%;
     width: 2px;
