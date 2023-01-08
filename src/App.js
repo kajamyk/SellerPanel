@@ -26,6 +26,8 @@ export default function App() {
         ])
     )
     return (
-        <RouterProvider router={router}/>
+        <div className="material-theme">
+            <RouterProvider router={router}/>
+        </div>
     );
 }
