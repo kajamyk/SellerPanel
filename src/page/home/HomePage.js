@@ -7,30 +7,58 @@ import {HomeSalesQuality} from "./HomeSalesQuality";
 import {HomeAdvices} from "./HomeAdvices";
 import {Chart} from "../../page/sales/chart/Chart"
 import {Card} from "../../shared/Card"
+import {getTheme} from "../../controllers/themecontroller";
+import {useEffect, useState} from "react";
 
 export function HomePage() {
+    let [images, setImages] = useState({})
+    useEffect(() => {
+        if (getTheme().theme === "light-theme") {
+            setImages(
+                {
+                    order: "drawable/order.svg",
+                    chart: "drawable/chart.svg",
+                    opinion: "drawable/opinion.svg",
+                    ranking: "drawable/ranking.svg",
+                    quality: "drawable/quality.svg",
+                    advice: "drawable/advice.svg",
+                }
+            )
+        } else {
+            setImages(
+                {
+                    order: "drawable/order_dark.svg",
+                    chart: "drawable/chart_dark.svg",
+                    opinion: "drawable/opinion_dark.svg",
+                    ranking: "drawable/ranking_dark.svg",
+                    quality: "drawable/quality_dark.svg",
+                    advice: "drawable/advice_dark.svg",
+                }
+            )
+        }
+    }, [getTheme().theme])
     return <div className="home">
         <Toolbar title={"Panel Sprzedawcy"}/>
         <div style={{margin: 24}} className="flex-row">
             <div style={{flex: 1, marginRight: 12}}>
-                <HomeCard title={"Zamówienia"}>
+                <HomeCard image={images.order} title={"Zamówienia"}>
                     <HomeOrders/>
                 </HomeCard>
-                <HomeCard title={"Wykres sprzedaży"}>
+                <HomeCard image={images.chart} title={"Wykres sprzedaży"}>
                     <Card><Chart></Chart></Card>
                 </HomeCard>
             </div>
             <div style={{flex: 1, marginLeft: 12}} className="flex-column">
-                <HomeCard title={"Opinie kupujących"}>
+                <HomeCard image={images.opinion} title={"Opinie kupujących"}>
                     <HomeOpinions/>
                 </HomeCard>
-                <HomeCard title={"Ranking ofert"}>
+                <HomeCard image={images.ranking} title={"Ranking ofert"}>
                     <HomeRanking/>
                 </HomeCard>
-                <HomeCard title={"Jakość sprzedaży"}>
+                <HomeCard image={images.quality} title={"Jakość sprzedaży"}>
                     <HomeSalesQuality/>
                 </HomeCard>
-                <HomeCard title={"Porady sprzedażowe"}>
+                <HomeCard image={images.advice} title={"Porady sprzedażowe"}>
                     <HomeAdvices/>
                 </HomeCard>
             </div>
