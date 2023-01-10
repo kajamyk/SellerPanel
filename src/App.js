@@ -2,7 +2,6 @@ import "./styles.css";
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom"
 import {LoginPage} from "./page/login/LoginPage";
 import {HomePage} from "./page/home/HomePage";
-import {AdvicePage} from "./page/advice/AdvicePage";
 import {OpinionsPage} from "./page/opinions/OpinionsPage";
 import {OrdersPage} from "./page/orders/OrdersPage";
 import {RankingPage} from "./page/ranking/RankingPage";
@@ -11,6 +10,7 @@ import {SalesQualityPage} from "./page/sales/quality/SalesQualityPage";
 import {NotFoundPage} from "./page/notfound/NotFoundPage";
 import {createContext, useState} from "react";
 import {getTheme} from "./controllers/themecontroller";
+import {ChooseShopPage} from "./page/chooseshop/ChooseShopPage";
 
 export const ThemeContext = createContext({})
 
@@ -20,7 +20,7 @@ export default function App() {
         createRoutesFromElements([
             <Route path="/" element={<HomePage/>}/>,
             <Route path="/login" element={<LoginPage/>}/>,
-            <Route path="/advice" element={<AdvicePage/>}/>,
+            <Route path="/choose_shop" element={<ChooseShopPage/>}/>,
             <Route path="/opinions" element={<OpinionsPage/>}/>,
             <Route path="/orders" element={<OrdersPage/>}/>,
             <Route path="/ranking" element={<RankingPage/>}/>,
