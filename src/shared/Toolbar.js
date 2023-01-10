@@ -22,10 +22,10 @@ export function Toolbar({title}) {
     let themeIconPath
     let logoPath
     if (getTheme().theme === "dark-theme") {
-        themeIconPath = "drawable/dark_mode.svg"
+        themeIconPath = "drawable/light_mode.svg"
         logoPath = "drawable/money_dark.svg"
     } else {
-        themeIconPath = "drawable/light_mode.svg"
+        themeIconPath = "drawable/dark_mode.svg"
         logoPath = "drawable/money_light.svg"
     }
 
