@@ -40,9 +40,20 @@
     background-color: var(--md-sys-color-surface);
 }
 
-.flexRow {
+.horizontal-divider {
+    height: 2px;
+    width: 100%;
+    background-color: var(--md-sys-color-on-primary-container);
+}
+
+.flex-row {
     display: flex;
     flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .headline1, .display-small {

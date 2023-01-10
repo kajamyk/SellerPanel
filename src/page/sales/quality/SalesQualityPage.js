@@ -9,7 +9,7 @@ function AspectItem({className, textColor, leftText, rightText}) {
         marginBottom: 24,
     }
     return <Card className={className}>
-        <div style={{textAlign: "center"}} className="flexRow">
+        <div style={{textAlign: "center"}} className="flex-row">
             <span style={spanStyle} className="display-medium">{leftText}</span>
             <VerticalDivider style={{height: "100pv"}}/>
             <span style={spanStyle} className="display-medium">{rightText}</span>

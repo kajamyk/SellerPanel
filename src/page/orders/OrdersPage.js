@@ -20,7 +20,7 @@ export function OrdersPage() {
         <Toolbar title={"Zamówienia"}/>
         <div style={{margin: 24}}>
             <Card>
-                <div style={{height: "75vh"}} className="flexRow">
+                <div style={{height: "75vh"}} className="flex-row">
                     <OrderInfo style={orderInfoStyle} headline={"Nieopłacone"} amount={10} moneyValue={100}/>
                     <VerticalDivider/>
                     <OrderInfo style={orderInfoStyle} headline={"Niewysłane"} amount={10} moneyValue={100}/>
