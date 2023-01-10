@@ -40,6 +40,12 @@
     background-color: var(--md-sys-color-surface);
 }
 
+.vertical-divider-on-primary-container {
+    height: 100%;
+    width: 2px;
+    background-color: var(--md-sys-color-on-primary-container);
+}
+
 .horizontal-divider {
     height: 2px;
     width: 100%;
@@ -54,6 +60,21 @@
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.segment-chooser {
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    text-align: center;
+    border: 2px solid var(--md-sys-color-primary);
+    overflow: hidden;
+}
+
+.chosen-segment {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--md-sys-color-primary-container);
 }
 
 .headline1, .display-small {
