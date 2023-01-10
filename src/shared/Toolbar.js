@@ -19,18 +19,21 @@ export function Toolbar({title}) {
         window.location.reload()
     }
 
-    let iconPath
+    let themeIconPath
+    let logoPath
     if (getTheme().theme === "dark-theme") {
-        iconPath = "drawable/dark_mode.svg"
+        themeIconPath = "drawable/dark_mode.svg"
+        logoPath = "drawable/money_dark.svg"
     } else {
-        iconPath = "drawable/light_mode.svg"
+        themeIconPath = "drawable/light_mode.svg"
+        logoPath = "drawable/money_light.svg"
     }
 
     return <div className="Toolbar">
-        <img onClick={commandNavigateToMain} src={'drawable/money.svg'} alt="App logo"/>
+        <img onClick={commandNavigateToMain} src={logoPath} alt="App logo"/>
         <span onClick={commandNavigateToMain} style={{marginLeft: 24, flex: 1}}
               className="headline-large">{title}</span>
         <img onClick={commandChangeTheme} style={{cursor: "pointer", width: 48, height: 48, marginRight: 24}}
-             src={iconPath}/>
+             src={themeIconPath}/>
     </div>
 }

@@ -10,12 +10,15 @@
     width: 100%;
     height: 86px;
     background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
 }
 
 .theme-icon {
     width: 48px;
     height: 48px;
     margin-right: 24px;
+    color: var(--md-sys-color-on-secondary-container);
+    background-color: var(--md-sys-color-on-secondary-container);
 }
 
 .Toolbar img {
