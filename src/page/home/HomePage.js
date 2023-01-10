@@ -5,6 +5,8 @@ import {HomeRanking} from "./HomeRanking";
 import {HomeOpinions} from "./HomeOpinions";
 import {HomeSalesQuality} from "./HomeSalesQuality";
 import {HomeAdvices} from "./HomeAdvices";
+import {Chart} from "../../page/sales/chart/Chart"
+import {Card} from "../../shared/Card"
 
 export function HomePage() {
     return <div className="home">
@@ -15,7 +17,7 @@ export function HomePage() {
                     <HomeOrders/>
                 </HomeCard>
                 <HomeCard title={"Wykres sprzedaży"}>
-                    {/*    Tu dodaj wykres */}
+                    <Card><Chart></Chart></Card>
                 </HomeCard>
             </div>
             <div style={{flex: 1, marginLeft: 12}} className="flex-column">
