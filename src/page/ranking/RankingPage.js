@@ -48,7 +48,7 @@ export function RankingPage() {
         setSegmentIndex(index)
     }
 
-    return <div>
+    return <div className="surface-background">
         <Toolbar title={"Ranking Ofert"}/>
         <span style={{marginTop: 16, marginLeft: 24, marginRight: 24}} className="display-large">Sortuj według:</span>
         <SegmentChooser segments={["Najczęściej kupowane", "Najrzadziej kupowane"]}

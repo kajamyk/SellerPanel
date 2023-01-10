@@ -11,6 +11,11 @@
     color: var(--md-sys-color-on-surface);
 }
 
+.surface-background {
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
 /* CSS */
 .button-56 {
     align-items: center;

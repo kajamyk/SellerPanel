@@ -17,7 +17,7 @@ export function SalesChartPage() {
         }]
 
     });
-    return <div>
+    return <div className="surface-background">
         <Toolbar title={"Wykres sprzedaży"}/>
         <div>
             <div style={{margin: 24, width: "120vh", float: "left", position: "relative"}}>
