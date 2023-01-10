@@ -1,67 +1,67 @@
 import {Toolbar} from "../../../shared/Toolbar"
 import {Card} from "../../../shared/Card"
 import {Date} from "./Date"
-import { Bar } from 'react-chartjs-2'
-import {Chart as ChartJS} from 'chart.js/auto'
-import React, { useState } from 'react';
+import {Bar} from 'react-chartjs-2'
+import React, {useState} from 'react';
+
 export function SalesChartPage() {
-      const SALE_ITEMS = [{date: new Date("2023", "01", "10"), itemsSold:11, turnover:1000},
-            {date: new Date("2023", "01", "13"), itemsSold:12, turnover:1005}, 
-            {date: new Date("2023", "01", "07"), itemsSold:30, turnover:5005}];
-             
-        const [userData, setUserData] = useState({
-            labels: [23.05, 24.05, 25.05, 26.05, 27.05, 28.05, 29.05],
-            datasets:[{
-                backgroundColor:"#FFFFFF",
-                barThickness:"30",
-                label:"Liczba sprzedanych sztuk",
-                data: [11, 12, 13, 11, 10, 12, 10]
-            }]
-             
-        });   
+    const SALE_ITEMS = [{date: new Date("2023", "01", "10"), itemsSold: 11, turnover: 1000},
+        {date: new Date("2023", "01", "13"), itemsSold: 12, turnover: 1005},
+        {date: new Date("2023", "01", "07"), itemsSold: 30, turnover: 5005}];
+
+    const [userData, setUserData] = useState({
+        labels: [23.05, 24.05, 25.05, 26.05, 27.05, 28.05, 29.05],
+        datasets: [{
+            backgroundColor: "#FFFFFF",
+            barThickness: "30",
+            label: "Liczba sprzedanych sztuk",
+            data: [11, 12, 13, 11, 10, 12, 10]
+        }]
+
+    });
     return <div>
         <Toolbar title={"Wykres sprzedaży"}/>
-            <div>
-                <div style={{margin: 24, width: "120vh", float:"left",position:"relative"}}>
+        <div>
+            <div style={{margin: 24, width: "120vh", float: "left", position: "relative"}}>
                 <Card>
                     <div style={{height: "75vh"}} className="flex-row">
-                        <div style={{height:"95%", width:"95%", top:"10%", position:"absolute", margin:24}}>
-                             <Bar data={userData}/>
+                        <div style={{height: "95%", width: "95%", top: "10%", position: "absolute", margin: 24}}>
+                            <Bar data={userData}/>
                         </div>
                     </div>
                 </Card>
             </div>
-            
-            <div style={{width: "70vh", float:"left", margin:40, position:"relative"}}>
+
+            <div style={{width: "70vh", float: "left", margin: 40, position: "relative"}}>
                 <Card>
                     <div style={{height: "30vh"}} className="flex-row">
                         <div>
-                            <label style={{position:"absolute", margin:24}}>
-                            <input type="radio"/>
+                            <label style={{position: "absolute", margin: 24}}>
+                                <input type="radio"/>
                                 Obrót
                             </label>
-                            <label style={{position:"absolute", bottom:"15%", margin:24}}>
+                            <label style={{position: "absolute", bottom: "15%", margin: 24}}>
                                 <input type="radio"/>
-                                    Liczba sprzedanych sztuk
+                                Liczba sprzedanych sztuk
                             </label>
                         </div>
-                         
+
                     </div>
                 </Card>
             </div>
-            
-            <div style={{width: "70vh", float:"left", position:"relative", margin:40}}>
+
+            <div style={{width: "70vh", float: "left", position: "relative", margin: 40}}>
                 <Card>
                     <div style={{height: "30vh"}} className="flex-row">
                         <Date name="Od" allign="top"/>
-                        
+
                         <Date name="Do" allign="bottom"/>
-                        
-                        
+
+
                     </div>
                 </Card>
             </div>
         </div>
-       
+
     </div>
 }

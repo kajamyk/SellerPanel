@@ -8,7 +8,7 @@ function OrderShortInfo({headline, amount}) {
 }
 
 export function HomeOrders() {
-    return <div style={{scrollBehavior: "smooth"}} className="flex-row">
+    return <div className="flex-row">
         <OrderShortInfo headline={"Nieopłacone"} amount={10}/>
         <VerticalDivider/>
         <OrderShortInfo headline={"Niewysłane"} amount={10}/>

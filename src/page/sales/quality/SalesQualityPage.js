@@ -2,7 +2,7 @@ import {Toolbar} from "../../../shared/Toolbar";
 import {Card} from "../../../shared/Card";
 import {VerticalDivider} from "../../../shared/VerticalDivider";
 
-function AspectItem({className, leftText, rightText}) {
+export function AspectItem({className, leftText, rightText}) {
     const spanStyle = {
         flex: 1,
         marginTop: 24,

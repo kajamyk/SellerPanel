@@ -2,28 +2,34 @@ import {Toolbar} from "../../shared/Toolbar";
 import {HomeCard} from "./HomeCard";
 import {HomeOrders} from "./HomeOrders";
 import {HomeRanking} from "./HomeRanking";
+import {HomeOpinions} from "./HomeOpinions";
+import {HomeSalesQuality} from "./HomeSalesQuality";
+import {HomeAdvices} from "./HomeAdvices";
 
 export function HomePage() {
-    return <div>
+    return <div className="home">
         <Toolbar title={"Panel Sprzedawcy"}/>
         <div style={{margin: 24}} className="flex-row">
             <div style={{flex: 1, marginRight: 12}}>
                 <HomeCard title={"Zamówienia"}>
                     <HomeOrders/>
                 </HomeCard>
+                <HomeCard title={"Wykres sprzedaży"}>
+                    {/*    Tu dodaj wykres */}
+                </HomeCard>
             </div>
-            <div style={{flex: 1, marginLeft: 12, alignItems: "stretch"}} className="flex-column">
+            <div style={{flex: 1, marginLeft: 12}} className="flex-column">
                 <HomeCard title={"Opinie kupujących"}>
+                    <HomeOpinions/>
+                </HomeCard>
+                <HomeCard title={"Ranking ofert"}>
                     <HomeRanking/>
                 </HomeCard>
-                <HomeCard title={"Opinie kupujących"}>
-                    <HomeOrders/>
+                <HomeCard title={"Jakość sprzedaży"}>
+                    <HomeSalesQuality/>
                 </HomeCard>
-                <HomeCard title={"Opinie kupujących"}>
-                    <HomeRanking/>
-                </HomeCard>
-                <HomeCard title={"Opinie kupujących"}>
-                    <HomeRanking/>
+                <HomeCard title={"Porady sprzedażowe"}>
+                    <HomeAdvices/>
                 </HomeCard>
             </div>
         </div>
