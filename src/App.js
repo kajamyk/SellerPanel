@@ -31,10 +31,12 @@ export default function App() {
     )
     return (
         <div className="material-theme">
-            <div className={theme.theme}>
-                <ThemeContext.Provider value={{theme, setTheme}}>
-                    <RouterProvider router={router}/>
-                </ThemeContext.Provider>
+            <div style={{height: "100vh", width: "100wh"}} className={theme.theme}>
+                <div className="app">
+                    <ThemeContext.Provider value={{theme, setTheme}}>
+                        <RouterProvider router={router}/>
+                    </ThemeContext.Provider>
+                </div>
             </div>
         </div>
     );
