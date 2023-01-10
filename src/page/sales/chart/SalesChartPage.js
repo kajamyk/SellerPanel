@@ -1,14 +1,12 @@
 import {Toolbar} from "../../../shared/Toolbar"
 import {Card} from "../../../shared/Card"
 import {Date} from "./Date"
+import {Chart} from "./Chart"
 import {Bar} from 'react-chartjs-2'
+import {Chart as ChartJS} from 'chart.js/auto'
 import React, {useState} from 'react';
 
 export function SalesChartPage() {
-    const SALE_ITEMS = [{date: new Date("2023", "01", "10"), itemsSold: 11, turnover: 1000},
-        {date: new Date("2023", "01", "13"), itemsSold: 12, turnover: 1005},
-        {date: new Date("2023", "01", "07"), itemsSold: 30, turnover: 5005}];
-
     const [userData, setUserData] = useState({
         labels: [23.05, 24.05, 25.05, 26.05, 27.05, 28.05, 29.05],
         datasets: [{
