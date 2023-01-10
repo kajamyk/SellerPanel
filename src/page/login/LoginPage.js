@@ -21,7 +21,7 @@ export function LoginPage() {
                     <input className="headline-medium" type="email" name="email" placeholder="email@example.com"/>
                     <span style={{marginTop: 20, marginBottom: 14}} className="headline-medium">Hasło</span>
                     <input className="headline-medium" type="password" name="password" placeholder="******"/>
-                    <button style={{marginTop: 32}} class="button-56" role="button">Zaloguj</button>
+                    <button style={{marginTop: 32}} className="button-56" role="button">Zaloguj</button>
                 </form>
             </div>
         </Card>

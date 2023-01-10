@@ -14,18 +14,15 @@
 /* CSS */
 .button-56 {
     align-items: center;
-    background-color: #fee6e3;
-    border: 2px solid #111;
+    background-color: var(--md-sys-color-surface);
+    border: 2px solid var(--md-sys-color-on-surface);
     border-radius: 8px;
     box-sizing: border-box;
-    color: #111;
+    color: var(--md-sys-color-on-surface);
     cursor: pointer;
     display: flex;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
     height: 48px;
     justify-content: center;
-    line-height: 24px;
     max-width: 100%;
     padding: 0 25px;
     position: relative;
@@ -34,6 +31,11 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    font-family: var(--md-sys-typescale-headline3-font);
+    font-weight: var(--md-sys-typescale-headline3-weight);
+    font-size: var(--md-sys-typescale-headline3-size);
+    line-height: var(--md-sys-typescale-headline3-line-height);
+    letter-spacing: var(--md-sys-typescale-headline3-tracking);
 }
 
 .button-56:after {
