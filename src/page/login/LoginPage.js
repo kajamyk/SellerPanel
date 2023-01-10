@@ -5,8 +5,7 @@ export function LoginPage() {
     const navigate = useNavigate()
     const commandLogin = (e) => {
         e.preventDefault()
-        console.log("navigate to /")
-        navigate("/")
+        navigate("/choose_shop")
     }
 
     return <div style={{display: "flex", alignItems: "center", justifyContent: "center", height: "100vh"}}>
