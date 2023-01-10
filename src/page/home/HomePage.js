@@ -9,8 +9,10 @@ import {Chart} from "../../page/sales/chart/Chart"
 import {Card} from "../../shared/Card"
 import {getTheme} from "../../controllers/themecontroller";
 import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export function HomePage() {
+    const navigate = useNavigate()
     let [images, setImages] = useState({})
     useEffect(() => {
         if (getTheme().theme === "light-theme") {
@@ -41,24 +43,24 @@ export function HomePage() {
         <Toolbar title={"Panel Sprzedawcy"}/>
         <div style={{margin: 24}} className="flex-row">
             <div style={{flex: 1, marginRight: 12}}>
-                <HomeCard image={images.order} title={"Zamówienia"}>
+                <HomeCard onClick={() => navigate("/orders")} image={images.order} title={"Zamówienia"}>
                     <HomeOrders/>
                 </HomeCard>
-                <HomeCard image={images.chart} title={"Wykres sprzedaży"}>
+                <HomeCard onClick={() => navigate("/sales_chart")} image={images.chart} title={"Wykres sprzedaży"}>
                     <Card><Chart></Chart></Card>
                 </HomeCard>
             </div>
             <div style={{flex: 1, marginLeft: 12}} className="flex-column">
-                <HomeCard image={images.opinion} title={"Opinie kupujących"}>
+                <HomeCard onClick={() => navigate("/opinions")} image={images.opinion} title={"Opinie kupujących"}>
                     <HomeOpinions/>
                 </HomeCard>
-                <HomeCard image={images.ranking} title={"Ranking ofert"}>
+                <HomeCard onClick={() => navigate("/ranking")} image={images.ranking} title={"Ranking ofert"}>
                     <HomeRanking/>
                 </HomeCard>
-                <HomeCard image={images.quality} title={"Jakość sprzedaży"}>
+                <HomeCard onClick={() => navigate("/sales_quality")} image={images.quality} title={"Jakość sprzedaży"}>
                     <HomeSalesQuality/>
                 </HomeCard>
-                <HomeCard image={images.advice} title={"Porady sprzedażowe"}>
+                <HomeCard style={{cursor: "auto"}} image={images.advice} title={"Porady sprzedażowe"}>
                     <HomeAdvices/>
                 </HomeCard>
             </div>
