@@ -9,9 +9,13 @@ import {RankingPage} from "./page/ranking/RankingPage";
 import {SalesChartPage} from "./page/sales/chart/SalesChartPage";
 import {SalesQualityPage} from "./page/sales/quality/SalesQualityPage";
 import {NotFoundPage} from "./page/notfound/NotFoundPage";
+import {createContext, useState} from "react";
+import {getTheme} from "./controllers/themecontroller";
+
+export const ThemeContext = createContext({})
 
 export default function App() {
-
+    let [theme, setTheme] = useState(getTheme())
     const router = createBrowserRouter(
         createRoutesFromElements([
             <Route path="/" element={<HomePage/>}/>,
@@ -27,7 +31,11 @@ export default function App() {
     )
     return (
         <div className="material-theme">
-            <RouterProvider router={router}/>
+            <div className={theme.theme}>
+                <ThemeContext.Provider value={{theme, setTheme}}>
+                    <RouterProvider router={router}/>
+                </ThemeContext.Provider>
+            </div>
         </div>
     );
 }

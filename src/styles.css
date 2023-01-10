@@ -12,6 +12,12 @@
     background-color: var(--md-sys-color-secondary-container);
 }
 
+.theme-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 24px;
+}
+
 .Toolbar img {
     width: 52px;
     height: 56px;

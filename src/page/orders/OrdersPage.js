@@ -6,7 +6,7 @@ function OrderInfo({style, headline, amount, moneyValue}) {
     return <div style={{...style, textAlign: "center", display: "flex", flexDirection: "column"}}>
         <span className="display-medium">{headline}</span>
         <span style={{marginTop: 16}} className="headline-large">{amount}</span>
-        <span className="title-large">Wartość:</span>
+        <span className="title-large">Kwota:</span>
         <span className="title-large">{moneyValue}zł</span>
     </div>
 }
