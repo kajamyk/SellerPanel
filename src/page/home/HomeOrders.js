@@ -1,6 +1,6 @@
 import {VerticalDivider} from "../../shared/VerticalDivider";
 
-function OrderShortInfo({headline, amount}) {
+function PreviewOrderInfo({headline, amount}) {
     return <div className="order-info">
         <span className="headline-large">{headline}</span>
         <span style={{marginTop: 16}} className="headline-medium">{amount}</span>
@@ -9,10 +9,10 @@ function OrderShortInfo({headline, amount}) {
 
 export function HomeOrders() {
     return <div className="flex-row">
-        <OrderShortInfo headline={"Nieopłacone"} amount={10}/>
+        <PreviewOrderInfo headline={"Nieopłacone"} amount={10}/>
         <VerticalDivider/>
-        <OrderShortInfo headline={"Niewysłane"} amount={10}/>
+        <PreviewOrderInfo headline={"Niewysłane"} amount={10}/>
         <VerticalDivider/>
-        <OrderShortInfo headline={"Zwroty"} amount={10}/>
+        <PreviewOrderInfo headline={"Zwroty"} amount={10}/>
     </div>
 }

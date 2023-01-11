@@ -8,11 +8,9 @@ import {RankingPage} from "./page/ranking/RankingPage";
 import {SalesChartPage} from "./page/sales/chart/SalesChartPage";
 import {SalesQualityPage} from "./page/sales/quality/SalesQualityPage";
 import {NotFoundPage} from "./page/notfound/NotFoundPage";
-import {createContext, useState} from "react";
+import {useState} from "react";
 import {getTheme} from "./controllers/themecontroller";
 import {ChooseShopPage} from "./page/chooseshop/ChooseShopPage";
-
-export const ThemeContext = createContext({})
 
 export default function App() {
     let [theme, setTheme] = useState(getTheme())
@@ -33,9 +31,7 @@ export default function App() {
         <div className="material-theme">
             <div style={{height: "100vh", width: "100wh"}} className={theme.theme}>
                 <div className="app">
-                    <ThemeContext.Provider value={{theme, setTheme}}>
-                        <RouterProvider router={router}/>
-                    </ThemeContext.Provider>
+                    <RouterProvider router={router}/>
                 </div>
             </div>
         </div>
