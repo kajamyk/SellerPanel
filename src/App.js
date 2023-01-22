@@ -13,7 +13,7 @@ import {getTheme} from "./controllers/themecontroller";
 import {ChooseShopPage} from "./page/chooseshop/ChooseShopPage";
 
 export default function App() {
-    let [theme, setTheme] = useState(getTheme())
+    let [theme] = useState(getTheme())
     const router = createBrowserRouter(
         createRoutesFromElements([
             <Route path="/" element={<HomePage/>}/>,
@@ -29,7 +29,7 @@ export default function App() {
     )
     return (
         <div className="material-theme">
-            <div style={{height: "100vh", width: "100wh"}} className={theme.theme}>
+            <div style={{height: "100vh", width: "100wh"}} className={`${theme.theme}`}>
                 <div className="app">
                     <RouterProvider router={router}/>
                 </div>

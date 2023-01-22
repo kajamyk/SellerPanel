@@ -8,13 +8,13 @@ function ShopItem({image, name}) {
         e.preventDefault()
         navigate("/")
     }
-    return <div onClick={commandOpenShop} style={{cursor: "pointer"}}>
+    return <div onClick={commandOpenShop}>
         <Card className={"ChooseShop-card card"}>
-            <div style={{textAlign: "center",}} className="flex-column">
-                <div style={{borderRadius: 10}}>
+            <div className="flex-column">
+                <div className="default-border-radius">
                     <img src={image} alt={"Shop logo"}/>
                 </div>
-                <span style={{margin: 16}} className="headline-large">{name}</span>
+                <span className="headline-large item-to-item-margin">{name}</span>
             </div>
         </Card>
     </div>
@@ -23,7 +23,7 @@ function ShopItem({image, name}) {
 export function ChooseShopPage() {
     return <div className="ChooseShop">
         <Toolbar title={"Wybierz sklep"}/>
-        <div style={{margin: 24, columns: "auto 2"}}>
+        <div className="choose-shop-container">
             <ShopItem name={"Shop name"} image={"drawable/shop.png"}/>
             <ShopItem name={"Shop name"} image={"drawable/shop.png"}/>
             <ShopItem name={"Shop name"} image={"drawable/shop.png"}/>

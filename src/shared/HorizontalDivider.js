@@ -1,3 +1,3 @@
-export function HorizontalDivider({style}) {
-    return <div style={style} className="horizontal-divider"></div>
+export function HorizontalDivider() {
+    return <div className="horizontal-divider"></div>
 }

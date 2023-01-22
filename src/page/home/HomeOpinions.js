@@ -22,8 +22,7 @@ const allItems = [
 ]
 
 export function HomeOpinions() {
-    return <div style={{overflowY: "scroll", paddingTop: 16, height: 250}}
-                className="flex-column">
+    return <div className="flex-column home-opinions">
         {
             allItems.map(item => (
                 <RatingItemShort productName={item.productName} comment={item.comment}/>

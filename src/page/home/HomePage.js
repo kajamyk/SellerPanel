@@ -5,7 +5,7 @@ import {HomeRanking} from "./HomeRanking";
 import {HomeOpinions} from "./HomeOpinions";
 import {HomeSalesQuality} from "./HomeSalesQuality";
 import {HomeAdvices} from "./HomeAdvices";
-import {Chart} from "../../page/sales/chart/Chart"
+import {Chart} from "../sales/chart/Chart"
 import {Card} from "../../shared/Card"
 import {getTheme} from "../../controllers/themecontroller";
 import {useEffect, useState} from "react";
@@ -42,7 +42,7 @@ export function HomePage() {
     return <div className="home">
         <Toolbar title={"Panel Sprzedawcy"}/>
         <div className="flex-row screen-margin">
-            <div style={{flex: 1, marginRight: 12}}>
+            <div className="home-item">
                 <HomeCard onClick={() => navigate("/orders")} image={images.order} title={"Zamówienia"}>
                     <HomeOrders/>
                 </HomeCard>
@@ -50,7 +50,7 @@ export function HomePage() {
                     <Card><Chart></Chart></Card>
                 </HomeCard>
             </div>
-            <div style={{flex: 1, marginLeft: 12}} className="flex-column">
+            <div className="flex-column home-item">
                 <HomeCard onClick={() => navigate("/opinions")} image={images.opinion} title={"Opinie kupujących"}>
                     <HomeOpinions/>
                 </HomeCard>
@@ -60,7 +60,7 @@ export function HomePage() {
                 <HomeCard onClick={() => navigate("/sales_quality")} image={images.quality} title={"Jakość sprzedaży"}>
                     <HomeSalesQuality/>
                 </HomeCard>
-                <HomeCard style={{cursor: "auto"}} image={images.advice} title={"Porady sprzedażowe"}>
+                <HomeCard className={"home-card-not-selectable"} image={images.advice} title={"Porady sprzedażowe"}>
                     <HomeAdvices/>
                 </HomeCard>
             </div>

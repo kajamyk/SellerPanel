@@ -29,13 +29,11 @@ export function Toolbar({title}) {
         logoPath = "drawable/money_light.svg"
     }
 
-    return <div className="Toolbar">
+    return <div className="toolbar">
         <img onClick={commandNavigateToMain} src={logoPath} alt="App logo"/>
-        <span onClick={commandNavigateToMain} style={{marginLeft: 24, flex: 1, cursor: "pointer"}}
-              className="headline-large">{title}</span>
-        <img style={{cursor: "pointer", width: 40, height: 30, marginRight: 24}}
-             src={"drawable/uk_flag.svg"}/>
-        <img onClick={commandChangeTheme} style={{cursor: "pointer", width: 48, height: 48, marginRight: 24}}
+        <span onClick={commandNavigateToMain} className="headline-large toolbar-title">{title}</span>
+        <img className="toolbar-image" src={"drawable/uk_flag.svg"}/>
+        <img onClick={commandChangeTheme} className="theme-icon"
              src={themeIconPath}/>
     </div>
 }

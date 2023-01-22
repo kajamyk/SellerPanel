@@ -6,7 +6,7 @@ export function AspectItem({className, leftText, rightText}) {
     return <Card className={className}>
         <div className="flex-row aspect">
             <span className="headline-medium aspect-item">{leftText}</span>
-            <VerticalDivider style={{height: "72px"}}/>
+            <VerticalDivider/>
             <span className="headline-medium aspect-item">{rightText}</span>
         </div>
     </Card>
@@ -15,7 +15,7 @@ export function AspectItem({className, leftText, rightText}) {
 export function SalesQualityPage() {
     return <div>
         <Toolbar title={"Jakość sprzedaży"}/>
-        <div style={{margin: 24}}>
+        <div className="screen-margin">
             <AspectItem className={"card"} leftText={"Aspekt"} rightText={"Ocena"}/>
             <AspectItem className={"card-transparent"} leftText={"Marketing produktu"} rightText={"75/100"}/>
             <AspectItem className={"card-secondary"} leftText={"Relacja z klientem"} rightText={"86/100"}/>

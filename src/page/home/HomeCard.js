@@ -1,7 +1,11 @@
 import {Card} from "../../shared/Card";
 
 export function HomeCard(props) {
-    return <div onClick={props.onClick} style={{cursor: "pointer",...props.style, flex: 1, marginBottom: 16}}>
+    let className = "home-card"
+    if (props.className !== undefined) {
+        className = props.className
+    }
+    return <div onClick={props.onClick} className={className}>
         <Card>
             <div className="Home-card-header">
                 <img src={props.image}/>

@@ -1,11 +1,11 @@
-export function VerticalDivider({style, className}) {
+export function VerticalDivider({className}) {
     let name = "vertical-divider"
     if (className !== undefined) {
         name = className
     }
-    return <div style={style} className={name}></div>
+    return <div className={name}></div>
 }
 
-export function VerticalDividerOnPrimaryContainer({style}) {
-    return <VerticalDivider style={style} className={"vertical-divider-on-primary-container"}/>
+export function VerticalDividerOnPrimaryContainer() {
+    return <VerticalDivider className={"vertical-divider-on-primary-container"}/>
 }

@@ -8,20 +8,19 @@ export function LoginPage() {
         navigate("/choose_shop")
     }
 
-    return <div style={{display: "flex", alignItems: "center", justifyContent: "center", height: "100vh"}}>
+    return <div className="login-container">
         <Card>
-            <div style={{margin: 24}}>
-                <div style={{textAlign: "center", alignItems: "center"}} className="flex-column">
+            <div className="screen-margin">
+                <div className="flex-column center-text">
                     <span className="display-medium">Logowanie</span>
                     <img src={'drawable/login.svg'} alt="Login"/>
                 </div>
-                <form onSubmit={commandLogin} style={{marginTop: 24, marginLeft: 48, marginRight: 48}}
-                      className="flex-column">
-                    <span style={{marginBottom: 14}} className="headline-medium">Email</span>
+                <form onSubmit={commandLogin} className="flex-column">
+                    <span className="headline-medium">Email</span>
                     <input className="headline-medium" type="email" name="email" placeholder="email@example.com"/>
-                    <span style={{marginTop: 20, marginBottom: 14}} className="headline-medium">Hasło</span>
+                    <span className="headline-medium">Hasło</span>
                     <input className="headline-medium" type="password" name="password" placeholder="******"/>
-                    <button style={{marginTop: 32}} className="button-56" role="button">Zaloguj</button>
+                    <button className="button-56" role="button">Zaloguj</button>
                 </form>
             </div>
         </Card>
