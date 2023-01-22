@@ -3,16 +3,11 @@ import {Card} from "../../../shared/Card";
 import {VerticalDivider} from "../../../shared/VerticalDivider";
 
 export function AspectItem({className, leftText, rightText}) {
-    const spanStyle = {
-        flex: 1,
-        marginTop: 24,
-        marginBottom: 24,
-    }
     return <Card className={className}>
-        <div style={{textAlign: "center"}} className="flex-row">
-            <span style={spanStyle} className="display-medium">{leftText}</span>
-            <VerticalDivider style={{height: "100pv"}}/>
-            <span style={spanStyle} className="display-medium">{rightText}</span>
+        <div className="flex-row aspect">
+            <span className="headline-medium aspect-item">{leftText}</span>
+            <VerticalDivider style={{height: "72px"}}/>
+            <span className="headline-medium aspect-item">{rightText}</span>
         </div>
     </Card>
 }
@@ -21,7 +16,7 @@ export function SalesQualityPage() {
     return <div>
         <Toolbar title={"Jakość sprzedaży"}/>
         <div style={{margin: 24}}>
-            <AspectItem className={"card"} leftText={"Nazwa aspektu"} rightText={"Ocena"}/>
+            <AspectItem className={"card"} leftText={"Aspekt"} rightText={"Ocena"}/>
             <AspectItem className={"card-transparent"} leftText={"Marketing produktu"} rightText={"75/100"}/>
             <AspectItem className={"card-secondary"} leftText={"Relacja z klientem"} rightText={"86/100"}/>
             <AspectItem className={"card-transparent"} leftText={"Czas wysyłki"} rightText={"75/100"}/>

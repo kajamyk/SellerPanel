@@ -31,7 +31,7 @@ export function Toolbar({title}) {
 
     return <div className="Toolbar">
         <img onClick={commandNavigateToMain} src={logoPath} alt="App logo"/>
-        <span onClick={commandNavigateToMain} style={{marginLeft: 24, flex: 1}}
+        <span onClick={commandNavigateToMain} style={{marginLeft: 24, flex: 1, cursor: "pointer"}}
               className="headline-large">{title}</span>
         <img style={{cursor: "pointer", width: 40, height: 30, marginRight: 24}}
              src={"drawable/uk_flag.svg"}/>

@@ -7,11 +7,10 @@ const allAdvices = [
 ]
 
 export function HomeAdvices() {
-    return <div style={{overflowY: "scroll", paddingTop: 16, height: 250, paddingLeft: 24, paddingRight: 24}}
-                className="flex-column">
+    return <div className="flex-column home-advices">
         {
             allAdvices.map(advice => (
-                    <span style={{marginBottom: 24}} className="headline-small">{advice}</span>
+                    <span className="headline-small home-advice">{advice}</span>
                 )
             )
         }

@@ -50,16 +50,15 @@ export function RankingPage() {
 
     return <div className="surface-background">
         <Toolbar title={"Ranking Ofert"}/>
-        <span style={{marginTop: 16, marginLeft: 24, marginRight: 24}} className="display-large">Sortuj według:</span>
+        <span className="display-medium screen-margin">Sortuj według:</span>
         <SegmentChooser segments={["Najczęściej kupowane", "Najrzadziej kupowane"]}
                         chosenSegmentIndex={segmentIndex}
                         onSegmentClick={commandChangeSegmentIndex}/>
 
-        <div style={{marginTop: 34, marginLeft: 24, marginRight: 24}} className="flex-column">
+        <div className="flex-column screen-margin">
             {
                 items.map(item => (
-                    <RankingItem productName={item.productName} image={item.image} stars={item.stars}
-                                 comment={item.comment}/>
+                    <RankingItem productName={item.productName} image={item.image} amount={item.timesBought} />
                 ))
             }
         </div>

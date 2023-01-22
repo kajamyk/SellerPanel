@@ -45,7 +45,7 @@ export function OpinionsPage() {
         <Toolbar title={"Opinie kupujących"}/>
         <SegmentChooser segments={["Wszystkie", "Pozytywne", "Negatywne"]} chosenSegmentIndex={segmentIndex}
                         onSegmentClick={commandChangeSelectedSegment}/>
-        <div style={{marginTop: 24, marginLeft: 24, marginRight: 24}} className="flex-column">
+        <div className="flex-column screen-margin">
             {
                 items.map(item => (
                     <RatingItem productName={item.productName} image={item.image} stars={item.stars}

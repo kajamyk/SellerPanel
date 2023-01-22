@@ -1,8 +1,7 @@
 import {AspectItem} from "../sales/quality/SalesQualityPage";
 
 export function HomeSalesQuality() {
-    return <div style={{margin: 24, height: 250, overflowY: "scroll"}}>
-        <AspectItem className={"card-secondary"} leftText={"Nazwa aspektu"} rightText={"Ocena"}/>
+    return <div className="home-quality">
         <AspectItem className={"card-transparent"} leftText={"Marketing produktu"} rightText={"75/100"}/>
         <AspectItem className={"card-transparent"} leftText={"Relacja z klientem"} rightText={"86/100"}/>
         <AspectItem className={"card-transparent"} leftText={"Czas wysyłki"} rightText={"75/100"}/>

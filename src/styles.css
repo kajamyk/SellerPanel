@@ -16,7 +16,84 @@
     color: var(--md-sys-color-on-surface);
 }
 
-/* CSS */
+.screen-margin {
+    margin: 24px;
+}
+
+.column-texts-margin-bottom {
+    margin-bottom: 8px;
+}
+
+.list-item-margin-bottom {
+    margin-bottom: 16px;
+}
+
+.image-content-margin-left {
+    margin-left: 16px;
+}
+
+.image-rating {
+    width: 200px;
+    height: 150px;
+}
+
+.image-ranking {
+    width: 300px;
+    height: 120px;
+}
+
+.image-ranking-small {
+    width: 140px;
+    height: 80px;
+}
+
+.home-ranking {
+    overflow-y: scroll;
+    padding-left: 16px;
+    height: 250px;
+}
+
+.home-quality {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.home-advices {
+    overflow-y: scroll;
+    height: 250px;
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.home-advice {
+    margin-bottom: 24px;
+}
+
+.aspect {
+    text-align: center;
+    height: 72px;
+    vertical-align: center;
+    align-items: center;
+}
+
+.aspect-item {
+    flex: 1
+}
+
+.star {
+    width: 36px;
+    height: 36px;
+    margin-right: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.Rating-Short {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 .button-56 {
     align-items: center;
     background-color: var(--md-sys-color-surface);
@@ -228,6 +305,9 @@
     text-align: center;
     border: 2px solid var(--md-sys-color-primary);
     overflow: hidden;
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .chosen-segment {

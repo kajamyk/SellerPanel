@@ -20,8 +20,8 @@ export function HomePage() {
                 {
                     order: "drawable/order.svg",
                     chart: "drawable/chart.svg",
-                    opinion: "drawable/opinion.svg",
-                    ranking: "drawable/ranking.svg",
+                    opinion: "drawable/ranking.svg",
+                    ranking: "drawable/opinion.svg",
                     quality: "drawable/quality.svg",
                     advice: "drawable/advice.svg",
                 }
@@ -31,8 +31,8 @@ export function HomePage() {
                 {
                     order: "drawable/order_dark.svg",
                     chart: "drawable/chart_dark.svg",
-                    opinion: "drawable/opinion_dark.svg",
-                    ranking: "drawable/ranking_dark.svg",
+                    opinion: "drawable/ranking_dark.svg",
+                    ranking: "drawable/opinion_dark.svg",
                     quality: "drawable/quality_dark.svg",
                     advice: "drawable/advice_dark.svg",
                 }
@@ -41,7 +41,7 @@ export function HomePage() {
     }, [getTheme().theme])
     return <div className="home">
         <Toolbar title={"Panel Sprzedawcy"}/>
-        <div style={{margin: 24}} className="flex-row">
+        <div className="flex-row screen-margin">
             <div style={{flex: 1, marginRight: 12}}>
                 <HomeCard onClick={() => navigate("/orders")} image={images.order} title={"Zamówienia"}>
                     <HomeOrders/>

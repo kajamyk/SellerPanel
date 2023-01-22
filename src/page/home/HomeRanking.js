@@ -29,12 +29,10 @@ const allItems = [
 ]
 
 export function HomeRanking() {
-    return <div style={{overflowY: "scroll", paddingTop: 16, height: 250, paddingLeft: 24, paddingRight: 24}}
-                className="flex-column">
+    return <div className="flex-column home-ranking">
         {
             allItems.map(item => (
-                <RankingItem productName={item.productName} image={item.image} stars={item.stars} width={200}
-                             height={125} comment={item.comment}/>
+                <RankingItem productName={item.productName} image={item.image} amount={item.timesBought} imageClassName="image-ranking-small"/>
             ))
         }
     </div>

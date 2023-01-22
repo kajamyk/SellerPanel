@@ -1,4 +1,4 @@
-import {RatingItem} from "../opinions/RatingItem";
+import {RatingItemShort} from "../opinions/RatingItemShort";
 
 const allItems = [
     {
@@ -22,12 +22,11 @@ const allItems = [
 ]
 
 export function HomeOpinions() {
-    return <div style={{overflowY: "scroll", paddingTop: 16, height: 250, paddingLeft: 24, paddingRight: 24}}
+    return <div style={{overflowY: "scroll", paddingTop: 16, height: 250}}
                 className="flex-column">
         {
             allItems.map(item => (
-                <RatingItem productName={item.productName} image={item.image} comment={item.comment} stars={0}
-                            width={200} height={125}/>
+                <RatingItemShort productName={item.productName} comment={item.comment}/>
             ))
         }
     </div>

@@ -1,7 +1,7 @@
 import {VerticalDividerOnPrimaryContainer} from "./VerticalDivider";
 
 export function SegmentChooser({segments, chosenSegmentIndex, onSegmentClick}) {
-    return <div style={{marginTop: 24, marginLeft: 24, marginRight: 24}} className="segment-chooser">
+    return <div className="segment-chooser">
         {segments.map(
             (segment, index) => {
                 let className = "flex-row"
