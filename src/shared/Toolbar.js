@@ -1,8 +1,11 @@
 import {useNavigate} from "react-router-dom";
 import {getTheme, setTheme} from "../controllers/themecontroller";
-
+import {getShop, changeShop} from "../controllers/shopcontroller";
 export function Toolbar({title}) {
     const navigate = useNavigate()
+    
+
+
 
     const commandNavigateToMain = (e) => {
         e.preventDefault()
@@ -30,8 +33,17 @@ export function Toolbar({title}) {
     }
 
     return <div className="toolbar">
+        
+
         <img onClick={commandNavigateToMain} src={logoPath} alt="App logo"/>
+        
         <span onClick={commandNavigateToMain} className="headline-large toolbar-title">{title}</span>
+        <select onChange={(event) => changeShop(event.target.value)} defaultValue={getShop()} className="headline-large select-list">
+            <option value="Orzechowy sklep">Orzechowy sklep</option>
+            <option value="Twoje orzechy">Twoje orzechy</option>
+            <option value="Orzechowy świat">Orzechowy świat</option>
+            <option value="Świat orzechów">Świat orzechów</option>
+        </select>
         <img className="toolbar-image" src={"drawable/uk_flag.svg"}/>
         <img onClick={commandChangeTheme} className="theme-icon"
              src={themeIconPath}/>
