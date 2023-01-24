@@ -2,8 +2,8 @@
     "login":"Login",
     "email":"Email",
     "password":"Password",
-    "login-button":"Log in",
-    "choose-shop":"Choose shop",
+    "loginbutton":"Log in",
+    "chooseshop":"Choose shop",
     "seller_panel":"Seller panel",
     "orders":"Orders",
     "seller_chart":"Seller chart",
@@ -31,10 +31,12 @@
     "aspect4":"Client satisfaction",
     "aspect5":"Customer retention",
     "aspect6":"Product sale",
-    "sum":"sum",
+    "sum":"Sum",
     "time_of_delivery":"Please improve the shipping time",
     "payments":"The number of unpaid products has increased, remind customers to pay",
     "return_advice":"The number of returns has increased, take care of improving the quality of products",
     "sale_advice":"Decrease in sales in December, think about doing a promotion",
-    "happy_advice":"Sales increase in February, keep it up"   
+    "happy_advice":"Sales increase in February, keep it up", 
+    "from":"from",
+    "to":"to"
 }

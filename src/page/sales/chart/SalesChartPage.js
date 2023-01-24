@@ -5,14 +5,16 @@ import {Chart} from "./Chart"
 import {Bar} from 'react-chartjs-2'
 import {Chart as ChartJS} from 'chart.js/auto'
 import React, {useState} from 'react';
+import { getCurrentData } from "../../../controllers/languagecontroller";
 
 export function SalesChartPage() {
+    const data = getCurrentData();
     const [userData, setUserData] = useState({
         labels: [23.05, 24.05, 25.05, 26.05, 27.05, 28.05, 29.05],
         datasets: [{
             backgroundColor: "#FFFFFF",
             barThickness: "30",
-            label: "Liczba sprzedanych sztuk",
+            label: data.number_of_sells,
             data: [11, 12, 13, 11, 10, 12, 10]
         }]
 

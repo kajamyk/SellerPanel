@@ -1,6 +1,7 @@
 import {Toolbar} from "../../../shared/Toolbar";
 import {Card} from "../../../shared/Card";
 import {VerticalDivider} from "../../../shared/VerticalDivider";
+import { getCurrentData } from "../../../controllers/languagecontroller";
 
 export function AspectItem({className, leftText, rightText}) {
     return <Card className={className}>
@@ -13,16 +14,17 @@ export function AspectItem({className, leftText, rightText}) {
 }
 
 export function SalesQualityPage() {
+    const data = getCurrentData();
     return <div>
-        <Toolbar title={"Jakość sprzedaży"}/>
+        <Toolbar title={data.sale_quality}/>
         <div className="screen-margin">
-            <AspectItem className={"card"} leftText={"Aspekt"} rightText={"Ocena"}/>
-            <AspectItem className={"card-transparent"} leftText={"Marketing produktu"} rightText={"75/100"}/>
-            <AspectItem className={"card-secondary"} leftText={"Relacja z klientem"} rightText={"86/100"}/>
-            <AspectItem className={"card-transparent"} leftText={"Czas wysyłki"} rightText={"75/100"}/>
-            <AspectItem className={"card-secondary"} leftText={"Satysfakcja klienta"} rightText={"86/100"}/>
-            <AspectItem className={"card-transparent"} leftText={"Utrzymanie klienta"} rightText={"75/100"}/>
-            <AspectItem className={"card-secondary"} leftText={"Sprzedaż produktu"} rightText={"86/100"}/>
+            <AspectItem className={"card"} leftText={data.aspect} rightText={data.grade}/>
+            <AspectItem className={"card-transparent"} leftText={data.aspect1} rightText={"75/100"}/>
+            <AspectItem className={"card-secondary"} leftText={data.aspect2} rightText={"86/100"}/>
+            <AspectItem className={"card-transparent"} leftText={data.aspect3} rightText={"75/100"}/>
+            <AspectItem className={"card-secondary"} leftText={data.aspect4} rightText={"86/100"}/>
+            <AspectItem className={"card-transparent"} leftText={data.aspect5} rightText={"75/100"}/>
+            <AspectItem className={"card-secondary"} leftText={data.aspect6} rightText={"86/100"}/>
         </div>
     </div>
 }

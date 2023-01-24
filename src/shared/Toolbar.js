@@ -1,10 +1,35 @@
 import {useNavigate} from "react-router-dom";
 import {getTheme, setTheme} from "../controllers/themecontroller";
 import {getShop, changeShop} from "../controllers/shopcontroller";
+import {changeLanguage, getCurrentLanguage} from "../controllers/languagecontroller"
+import {useState} from 'react';
 export function Toolbar({title}) {
     const navigate = useNavigate()
     
-
+    
+    let pl = 'drawable/pl.svg';
+    let en = 'drawable/uk_flag.svg';
+    let lang = getCurrentLanguage();
+    const [langPath, setLangPath] = useState(() => {
+        console.log(lang)
+        if(lang === "PL") {
+            return pl;
+        } else {
+            return en;
+        }
+        
+  });
+   
+    
+    const setlanguage = (e) => {
+        e.preventDefault();
+        changeLanguage();
+        if(langPath === en) {
+            setLangPath(pl);
+        } else {
+            setLangPath(en);
+        }
+    }
 
 
     const commandNavigateToMain = (e) => {
@@ -31,6 +56,7 @@ export function Toolbar({title}) {
         themeIconPath = "drawable/dark_mode.svg"
         logoPath = "drawable/money_light.svg"
     }
+    
 
     return <div className="toolbar">
         
@@ -44,7 +70,7 @@ export function Toolbar({title}) {
             <option value="Orzechowy świat">Orzechowy świat</option>
             <option value="Świat orzechów">Świat orzechów</option>
         </select>
-        <img className="toolbar-image" src={"drawable/uk_flag.svg"}/>
+        <img className="toolbar-image" src={langPath} onClick={setlanguage}/>
         <img onClick={commandChangeTheme} className="theme-icon"
              src={themeIconPath}/>
     </div>

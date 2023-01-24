@@ -2,6 +2,7 @@ import {SegmentChooser} from "../../shared/SegmentChooser";
 import {Toolbar} from "../../shared/Toolbar";
 import {useEffect, useState} from "react";
 import {RankingItem} from "./RankingItem";
+import { getCurrentData } from "../../controllers/languagecontroller";
 
 const allItems = [
     {
@@ -32,6 +33,8 @@ const allItems = [
 ]
 
 export function RankingPage() {
+    const data = getCurrentData();
+    
     let [items, setItems] = useState(allItems)
     let [segmentIndex, setSegmentIndex] = useState(0)
 
@@ -50,8 +53,8 @@ export function RankingPage() {
 
     return <div className="surface-background">
         <Toolbar title={"Ranking Ofert"}/>
-        <span className="display-medium screen-margin">Sortuj według:</span>
-        <SegmentChooser segments={["Najczęściej kupowane", "Najrzadziej kupowane"]}
+        <span className="display-medium screen-margin">{data.sort}</span>
+        <SegmentChooser segments={[data.most_frequently_bought, data.least_Frequantly_bought]}
                         chosenSegmentIndex={segmentIndex}
                         onSegmentClick={commandChangeSegmentIndex}/>
 

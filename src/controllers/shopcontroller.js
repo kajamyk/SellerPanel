@@ -1,13 +1,13 @@
 const SHOP = "Orzechowy sklep"
 export const changeShop = (shop) => {
-    console.log("change");
-    console.log(shop)
-    localStorage.setItem(SHOP, JSON.stringify(shop));
-    console.log("get" +  JSON.parse(localStorage.getItem("Orzechowy sklep")).value)
+    //console.log("change");
+    //console.log(shop)
+    localStorage.setItem("SHOP", JSON.stringify(shop));
+    //console.log("get" +  JSON.parse(localStorage.getItem("Orzechowy sklep")).value)
 }
 export const getShop = () => {
     
-     let shop = JSON.parse(localStorage.getItem(SHOP));
+     let shop = JSON.parse(localStorage.getItem("SHOP"));
      
     if (shop === undefined || shop === null) {
         removeShop();
@@ -18,5 +18,5 @@ export const getShop = () => {
 }
 export const removeShop = () => {
     //console.log("remove");
-    changeShop("Orzechwy sklep");
+    changeShop("Orzechowy sklep");
 }

@@ -2,6 +2,7 @@ import {useState} from "react";
 import {Toolbar} from "../../shared/Toolbar";
 import {SegmentChooser} from "../../shared/SegmentChooser";
 import {RatingItem} from "./RatingItem";
+import { getCurrentData } from "../../controllers/languagecontroller";
 
 const allItems = [
     {
@@ -25,6 +26,7 @@ const allItems = [
 ]
 
 export function OpinionsPage() {
+    const data = getCurrentData();
     let [segmentIndex, setSegmentIndex] = useState(0)
     let [items, setItems] = useState(allItems)
     const commandChangeSelectedSegment = (index) => {
@@ -42,8 +44,8 @@ export function OpinionsPage() {
     }
 
     return <div>
-        <Toolbar title={"Opinie kupujących"}/>
-        <SegmentChooser segments={["Wszystkie", "Pozytywne", "Negatywne"]} chosenSegmentIndex={segmentIndex}
+        <Toolbar title={data.customer_opinions}/>
+        <SegmentChooser segments={[data.all_opinions, data.positive_opinions, data.negative_opinions]} chosenSegmentIndex={segmentIndex}
                         onSegmentClick={commandChangeSelectedSegment}/>
         <div className="flex-column screen-margin">
             {
