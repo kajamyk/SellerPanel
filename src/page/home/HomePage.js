@@ -10,8 +10,10 @@ import {Card} from "../../shared/Card"
 import {getTheme} from "../../controllers/themecontroller";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import { getCurrentData } from "../../controllers/languagecontroller";
 
 export function HomePage() {
+    const data = getCurrentData();
     const navigate = useNavigate()
     let [images, setImages] = useState({})
     useEffect(() => {
@@ -40,27 +42,27 @@ export function HomePage() {
         }
     }, [getTheme().theme])
     return <div className="home">
-        <Toolbar title={"Panel Sprzedawcy"}/>
+        <Toolbar title={data.seller_panel}/>
         <div className="flex-row screen-margin">
             <div className="home-item">
-                <HomeCard onClick={() => navigate("/orders")} image={images.order} title={"Zamówienia"}>
+                <HomeCard onClick={() => navigate("/orders")} image={images.order} title={data.orders}>
                     <HomeOrders/>
                 </HomeCard>
-                <HomeCard image={images.chart} title={"Wykres sprzedaży"}>
+                <HomeCard image={images.chart} title={data.seller_chart}>
                     <Card><Chart></Chart></Card>
                 </HomeCard>
             </div>
             <div className="flex-column home-item">
-                <HomeCard onClick={() => navigate("/opinions")} image={images.opinion} title={"Opinie kupujących"}>
+                <HomeCard onClick={() => navigate("/opinions")} image={images.opinion} title={data.customer_opinions}>
                     <HomeOpinions/>
                 </HomeCard>
-                <HomeCard onClick={() => navigate("/ranking")} image={images.ranking} title={"Ranking ofert"}>
+                <HomeCard onClick={() => navigate("/ranking")} image={images.ranking} title={data.offer_ranking}>
                     <HomeRanking/>
                 </HomeCard>
-                <HomeCard onClick={() => navigate("/sales_quality")} image={images.quality} title={"Jakość sprzedaży"}>
+                <HomeCard onClick={() => navigate("/sales_quality")} image={images.quality} title={data.sale_quality}>
                     <HomeSalesQuality/>
                 </HomeCard>
-                <HomeCard className={"home-card-not-selectable"} image={images.advice} title={"Porady sprzedażowe"}>
+                <HomeCard className={"home-card-not-selectable"} image={images.advice} title={data.sale_advices}>
                     <HomeAdvices/>
                 </HomeCard>
             </div>

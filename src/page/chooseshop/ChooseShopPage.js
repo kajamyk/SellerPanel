@@ -2,8 +2,10 @@ import {Card} from "../../shared/Card";
 import {Toolbar} from "../../shared/Toolbar";
 import {useNavigate} from "react-router-dom";
 import {changeShop} from '../../controllers/shopcontroller'
+import { getCurrentData } from "../../controllers/languagecontroller";
 
 function ShopItem({image, name}) {
+
     const navigate = useNavigate()
     const commandOpenShop = (e) => {
         e.preventDefault()
@@ -24,8 +26,9 @@ function ShopItem({image, name}) {
 }
 
 export function ChooseShopPage() {
+        const data = getCurrentData();
     return <div className="ChooseShop">
-        <Toolbar title={"Wybierz sklep"}/>
+        <Toolbar title={data.chooseshop}/>
         <div className="choose-shop-container">
             <ShopItem name={"Orzechowy sklep"} image={"drawable/orzechy1.jpg"}/>
             <ShopItem name={"Twoje orzechy"} image={"drawable/orzechy2.jpg"}/>

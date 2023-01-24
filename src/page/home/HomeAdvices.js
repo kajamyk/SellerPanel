@@ -1,9 +1,10 @@
+import { getCurrentData } from "../../controllers/languagecontroller";
+
+const data = getCurrentData();
 const allAdvices = [
-    "Należy poprawić czas wysyłki",
-    "Wzrosła liczba nieopłaconych produktów, przypomnij klientom o zapłacie",
-    "Wzrosła liczba zwrotów zadbaj o podniesienie jakości produktów",
-    "Spadek sprzedaży w grudniu, przemyśl zrobienie promocji",
-    "Wzrost sprzedaży w lutym, oby tak dalej"
+    data.sale_advice,
+    data.happy_advice,
+    data.return_advice
 ]
 
 export function HomeAdvices() {
