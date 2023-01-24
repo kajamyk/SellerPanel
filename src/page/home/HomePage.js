@@ -46,7 +46,7 @@ export function HomePage() {
                 <HomeCard onClick={() => navigate("/orders")} image={images.order} title={"Zamówienia"}>
                     <HomeOrders/>
                 </HomeCard>
-                <HomeCard onClick={() => navigate("/sales_chart")} image={images.chart} title={"Wykres sprzedaży"}>
+                <HomeCard image={images.chart} title={"Wykres sprzedaży"}>
                     <Card><Chart></Chart></Card>
                 </HomeCard>
             </div>

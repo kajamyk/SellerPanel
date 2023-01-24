@@ -263,6 +263,13 @@
     cursor: pointer;
 }
 
+.select-list {
+    border-radius: 10px;
+    width:260px;
+    text-align: center;
+    margin: 24px;
+}
+
 .theme-icon {
     width: 48px;
     height: 48px;
