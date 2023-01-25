@@ -2,6 +2,7 @@ import { VerticalDivider } from "../../shared/VerticalDivider";
 import { ShortInfo } from "../../shared/Info";
 import { getCurrentData } from "../../controllers/languagecontroller";
 import React, { useEffect, useState} from "react";
+import {orderItems} from '../../mock'
 export function HomeOrders() {
     const data = getCurrentData();
     const notPayed = data.not_payed;
@@ -10,11 +11,11 @@ export function HomeOrders() {
   
   return (
     <div className="flex-row">
-      <ShortInfo headline={notPayed} amount={10} />
+      <ShortInfo headline={notPayed} amount={orderItems.notPayed} />
       <VerticalDivider />
-      <ShortInfo headline={notSend} amount={10} />
+      <ShortInfo headline={notSend} amount={orderItems.notSend} />
       <VerticalDivider />
-      <ShortInfo headline={returns} amount={10} />
+      <ShortInfo headline={returns} amount={orderItems.returns} />
     </div>
   );
 }

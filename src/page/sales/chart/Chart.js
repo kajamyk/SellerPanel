@@ -4,24 +4,25 @@ import {Card} from "../../../shared/Card"
 import React, {useState, useEffect} from 'react';
 import{getTheme} from "../../../controllers/themecontroller"
 import { getCurrentData } from "../../../controllers/languagecontroller";
+import {chartItems} from "../../../mock"
 export function Chart(props) {
     //ChartJS.defaults.color = '#93000A';
     const data = getCurrentData();
     //2A0054
     const [userData, setUserData] = useState({
-        labels: [16.01, 17.01, 18.01, 19.01, 20.01, 21.01, 22.01],
+        labels: chartItems.labels,
         datasets: [{
             backgroundColor: "#C79FBE",
 
             barThickness: "30",
             label: data.sold_items,
-            data: [11, 12, 13, 11, 10, 12, 10], 
+            data: chartItems.data1
         },
         {
             backgroundColor: "#FFFFFF",
             barThickness: "30",
             label: data.turnover,
-            data: [101, 102, 130, 110, 100, 120, 100],
+            data: chartItems.data2
         }
         ]
     });
@@ -29,19 +30,19 @@ export function Chart(props) {
      if (getTheme().theme === "light-theme") {
          ChartJS.defaults.color = '#2A0054';
          setUserData({
-        labels: [16.01, 17.01, 18.01, 19.01, 20.01, 21.01, 22.01],
+        labels: chartItems.labels,
         datasets: [{
 
             backgroundColor: "#C79FBE",
             barThickness: "30",
             label: data.sold_items,
-            data: [11, 12, 13, 11, 10, 12, 10], 
+            data: chartItems.data1
         },
         {
             backgroundColor: "#FFFFFF",
             barThickness: "30",
             label: data.turnover,
-            data: [101, 102, 130, 110, 100, 120, 100],
+            data: chartItems.data2
         }
         ]
     });
@@ -49,14 +50,14 @@ export function Chart(props) {
              ChartJS.defaults.color = '#FFFFFF';
           
          setUserData({
-        labels: [16.01, 17.01, 18.01, 19.01, 20.01, 21.01, 22.01],
+        labels: chartItems.labels,
         datasets: [{
             
 
             backgroundColor: "#41196F",
             barThickness: "30",
             label: data.sold_items,
-            data: [11, 12, 13, 11, 10, 12, 10], 
+            data: chartItems.data1
         },
         {
             
@@ -64,7 +65,7 @@ export function Chart(props) {
             backgroundColor: "#1B1B1a",
             barThickness: "30",
             label: data.turnover,
-            data: [101, 102, 130, 110, 100, 120, 100],
+            data: chartItems.data2
         }
         ]
     });

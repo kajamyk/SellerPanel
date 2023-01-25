@@ -3,39 +3,12 @@ import {Toolbar} from "../../shared/Toolbar";
 import {useEffect, useState} from "react";
 import {RankingItem} from "./RankingItem";
 import { getCurrentData } from "../../controllers/languagecontroller";
-
-const allItems = [
-    {
-        productName: "Orzechy włoskie",
-        image: "drawable/walnut.png",
-        timesBought: 10,
-    },
-    {
-        productName: "Orzechy brazylijskie",
-        image: "drawable/brasilian_nut.png",
-        timesBought: 1,
-    },
-    {
-        productName: "Orzechy nerkowca",
-        image: "drawable/cashew.png",
-        timesBought: 15,
-    },
-    {
-        productName: "Orzechy pekan",
-        image: "drawable/pekan_nut.png",
-        timesBought: 310,
-    },
-    {
-        productName: "Migdały",
-        image: "drawable/almond.png",
-        timesBought: 5,
-    },
-]
+import {rankingItems} from '../../mock'
 
 export function RankingPage() {
     const data = getCurrentData();
     
-    let [items, setItems] = useState(allItems)
+    let [items, setItems] = useState(rankingItems)
     let [segmentIndex, setSegmentIndex] = useState(0)
 
     useEffect(() => {
@@ -44,9 +17,9 @@ export function RankingPage() {
 
     const commandChangeSegmentIndex = (index) => {
         if (index === 0) {
-            setItems(allItems.sort((item, nextItem) => nextItem.timesBought - item.timesBought))
+            setItems(rankingItems.sort((item, nextItem) => nextItem.timesBought - item.timesBought))
         } else if (index === 1) {
-            setItems(allItems.sort((item, nextItem) => item.timesBought - nextItem.timesBought))
+            setItems(rankingItems.sort((item, nextItem) => item.timesBought - nextItem.timesBought))
         }
         setSegmentIndex(index)
     }
@@ -60,7 +33,7 @@ export function RankingPage() {
 
         <div className="flex-column screen-margin">
             {
-                items.map(item => (
+                rankingItems.map(item => (
                     <RankingItem productName={item.productName} image={item.image} amount={item.timesBought} />
                 ))
             }
