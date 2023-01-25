@@ -1,11 +1,5 @@
-import { getCurrentData } from "../../controllers/languagecontroller";
+import {allAdvices} from '../../mock'
 
-const data = getCurrentData();
-const allAdvices = [
-    data.sale_advice,
-    data.happy_advice,
-    data.return_advice
-]
 
 export function HomeAdvices() {
     return <div className="flex-column home-advices">

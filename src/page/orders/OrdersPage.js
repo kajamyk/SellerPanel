@@ -3,7 +3,7 @@ import {VerticalDivider} from "../../shared/VerticalDivider";
 import {Toolbar} from "../../shared/Toolbar";
 import {DetailedInfo} from "../../shared/Info";
 import { getCurrentData } from "../../controllers/languagecontroller";
-
+import {orderInfo} from "../../mock"
 export function OrdersPage() {
     const data = getCurrentData();
     return <div>
@@ -11,11 +11,11 @@ export function OrdersPage() {
         <div className="screen-margin">
             <Card>
                 <div className="flex-row">
-                    <DetailedInfo headline={data.not_payed} amount={10} moneyValue={100}/>
+                    <DetailedInfo headline={data.not_payed} amount={orderInfo.notPayed} moneyValue={orderInfo.notPayedSum}/>
                     <VerticalDivider/>
-                    <DetailedInfo headline={data.not_delivered} amount={10} moneyValue={100}/>
+                    <DetailedInfo headline={data.not_delivered} amount={orderInfo.notSend} moneyValue={orderInfo.notSendSum}/>
                     <VerticalDivider/>
-                    <DetailedInfo headline={data.returns} amount={10} moneyValue={100}/>
+                    <DetailedInfo headline={data.returns} amount={orderInfo.returns} moneyValue={orderInfo.returnsSum}/>
                 </div>
             </Card>
         </div>
