@@ -10,7 +10,7 @@ import {Card} from "../../shared/Card"
 import {getTheme} from "../../controllers/themecontroller";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import { getCurrentData } from "../../controllers/languagecontroller";
+import {getCurrentData} from "../../controllers/languagecontroller";
 
 export function HomePage() {
     const data = getCurrentData();
@@ -48,7 +48,7 @@ export function HomePage() {
                 <HomeCard onClick={() => navigate("/orders")} image={images.order} title={data.orders}>
                     <HomeOrders/>
                 </HomeCard>
-                <HomeCard image={images.chart} title={data.seller_chart}>
+                <HomeCard className={"home-card-not-selectable"} image={images.chart} title={data.seller_chart}>
                     <Card><Chart></Chart></Card>
                 </HomeCard>
             </div>
